@@ -10,7 +10,7 @@ double stabledevd(float alpha) {
 
   double theta, W, holder, left, right;
 
-  theta=M_PI*((float)rand()/RAND_MAX - 0.5);
+  theta = M_PI*((float)rand()/RAND_MAX - 0.5);
   W = -log((float)rand()/RAND_MAX); // takes natural log
 
   // if beta = 0 then c(alpha,beta)=1; theta_0 = 0
@@ -18,8 +18,8 @@ double stabledevd(float alpha) {
   //  * (cos (theta - alpha theta)/W) ^(1-alpha)/alpha
 
   left = (sin(alpha*theta)/pow(cos(theta), 1.0/alpha));
-  right= pow(cos(theta*(1.0 - alpha))/W, ((1.0-alpha)/alpha));
-  holder=left*right;
+  right = pow(cos(theta*(1.0 - alpha))/W, ((1.0-alpha)/alpha));
+  holder = left*right;
   return(holder);
 }
 

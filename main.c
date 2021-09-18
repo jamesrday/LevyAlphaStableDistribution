@@ -3,7 +3,7 @@
 #include <math.h>
 #include <time.h>
 
-double stabledevd(float alpha) {
+double stableGen(float alpha) {
 
   // we define beta = 0
   // for a symmetric stable distribution. 
@@ -33,7 +33,7 @@ int main(void) {
     }
     
     for (int i=0; i<length; i++) {
-        x[i] = stabledevd(1.6);
+        x[i] = stableGen(1.6);
         printf("%.2f\n",x[i]);
     }
 

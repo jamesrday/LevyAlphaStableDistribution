@@ -1,2 +1,2 @@
 # LevyAlphaStableDistribution
-We implement a method for generating n random values, sampled from a Levy alpha stable distribution. It is useful for Levy adjusted random walks and financial risk modelling. 
+We implement a method for generating n random values, sampled from a Levy alpha stable distribution. It is useful for Levy adjusted random walks and financial risk modelling. As alpha tends to 2 and n tends to 0, returns become normally distributed, so Monte Carlo call option pricing approaches the Black-Scholes formulation (see pricing.c). For smaller alphas and longer time periods, the Levy alpha model produces a larger call premium. For accurate pricing, iterations should exceed 2 million.
